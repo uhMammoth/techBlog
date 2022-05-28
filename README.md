@@ -1,5 +1,11 @@
 # techBlog
 
+## TO DO
+- swap edit and go to references on dashboard posts
+- adjust css throughout entire application, namely posts, login, signup, navbar, comments
+- adjust new post button on dashboard
+- set idle timeout for session
+
 ## Mock up
 
 ![mockup](./assets/14-mvc-homework-demo-01.gif)
