@@ -71,6 +71,7 @@ router.get('/post/:id', (req, res) => {
     ]
   })
     .then(dbPostData => {
+      console.log(req.session.username);
       if (!dbPostData) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
@@ -80,7 +81,8 @@ router.get('/post/:id', (req, res) => {
 
       res.render('single-post', {
         post,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
+        username: req.session.username
       });
     })
     .catch(err => {

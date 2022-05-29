@@ -1,3 +1,8 @@
+:root {
+  --color-primary: hsl(29, 93%, 26%);
+  --color-secondary: hsl(39, 90%, 36%);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,7 +17,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: var(--color-primary);
   font-weight: bold;
   transition: color .1s;
 }
@@ -22,7 +27,7 @@ a:hover {
 }
 
 button {
-  background-color: #225ca3;
+  background-color: var(--color-primary);
   border: 0;
   padding: 1%;
   color: white;
@@ -33,7 +38,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: var(--color-secondary);
 }
 
 .post-list {
@@ -42,31 +47,11 @@ button:hover {
   list-style: none;
 }
 
-textarea, input {
-  padding: .5%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-textarea:focus, input:focus {
-  outline: none;
-  border: 1px solid #3486eb;
-}
-
-textarea {
-  min-width: 40%;
-  min-height: 100px;
-}
-
-form > div {
-  margin-bottom: 2%;
-}
-
 form label {
   display: block;
 }
 header h1 {
-  color: #225ca3;
+  color: var(--color-primary);
 }
 
 .wrapper {
@@ -97,7 +82,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: var(--color-primary);
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -106,7 +91,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: var(--color-secondary);
 }
 
 .delete-post-btn {
@@ -119,27 +104,22 @@ main {
 
 .post {
   margin-bottom: 2%;
-  border: 2px solid #062d74;
+  border: 2px solid var(--color-primary);
   border-radius: 5px;
 }
 .post:hover {
-  border-color: #396ac5;
+  border-color: var(--color-secondary);
 }
 .title:hover  {
-  background-color: #396ac5;
+  background-color: var(--color-secondary);
 }
 
 .title {
-  background-color: #062d74;
+  background-color: var(--color-primary);
   padding: 10px;
   color: white;
   display: flex;
   justify-content: space-between;
-}
-
-.signup-page, .login-page {
-  width: 100%;
-  border: 1px solid black;
 }
 
 .meta {
@@ -167,14 +147,30 @@ main {
 }
 
 .comment-form {
+  padding-top: 15px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   margin-bottom: 5%;
+  width: 100%;
+}
+.comment-form div {
+  padding: 15px 0 10px 0;
+  text-align: center;
+  background-color: lightgrey;
+}
+.comment-body, .comment-submit {  
+  min-width: 90%;  
+  text-align: center;
+}
+.comment-body {
+  min-height: 100px;
 }
 
 .comment {
   padding-top: 10px;
   margin: 1%;
-  background-color: #062d74;
-  border: 2px solid #062d74;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .comment .meta {
@@ -191,12 +187,74 @@ main {
   padding-left: 5%;
 }
 
+.new-post {
+  text-align: center;
+}
+.new-post-link {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.new-post-link:hover {
+  background-color: var(--color-primary);
+}
+
 .new-post-form input {
   width: 300px;
 }
 
-.edit-post-form {
+.edit-post-form, .new-post-form {
+  padding-top: 15px;
   margin-bottom: 5%;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.edit-post-form div, .new-post-form div {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.edit-post-form div input, .new-post-form div input {
+  width: 100%;
+  min-height: 50px;
+}
+.edit-post-form div p, .new-post-form div p {
+  margin-bottom: 0;
+}
+.edit-post-form div button, .new-post-form div button {
+  width: 100%;
+  margin: 5px;
+}
+
+.signup-page, .login-page {
+  margin: auto;
+  width: 50%;
+  padding-top: 15px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.signup-form, .login-form {
+  background-color: #fff;
+  padding: 5px;
+}
+
+.signup-form label, .login-form label {
+  margin-top: 15px;
+}
+
+.signup-form input, .login-form input {
+  width: 100%;
+  min-height: 50px;
+}
+.signup-form div, .login-form div {
+  text-align: center;
+}
+
+.signup-form div button, .login-form div button {  
+  padding: 10px 40%;
+  margin: 10px;
 }
 
 footer {

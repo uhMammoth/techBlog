@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //session
 const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
+  secret: 'classified',
+  cookie: { maxAge: 3600000 },
+  resave: false,  
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize

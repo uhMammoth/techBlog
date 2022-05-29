@@ -1,10 +1,32 @@
 # techBlog
+This application demonstrates full stack development in the form of a blog. Newly learned technologies include handlebars template engine
+## Demonstration Video
+[Youtube]()
+## Repository
+[Github](https://github.com/uhMammoth/techBlog)
 
-## TO DO
-- swap edit and go to references on dashboard posts
-- adjust css throughout entire application, namely posts, login, signup, navbar, comments
-- adjust new post button on dashboard
-- set idle timeout for session
+## Local Usage
+MySQL
+```
+source db/schema.sql
+```
+Console
+```
+node seeds/index.js
+node server.js
+```
+## Technologies / Packages
+```
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+```
 
 ## Mock up
 
