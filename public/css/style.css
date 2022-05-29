@@ -119,9 +119,8 @@ main {
 
 .post {
   margin-bottom: 2%;
-  line-height: 150%;
   border: 2px solid #062d74;
-
+  border-radius: 5px;
 }
 .post:hover {
   border-color: #396ac5;
@@ -172,18 +171,24 @@ main {
 }
 
 .comment {
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
+  padding-top: 10px;
+  margin: 1%;
+  background-color: #062d74;
+  border: 2px solid #062d74;
 }
 
 .comment .meta {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+}
+.text {
+  background-color: white;
+  padding: 5px 0 0 5%;
+  line-height: 1.5;
+}
+.text span {
+  padding-left: 5%;
 }
 
 .new-post-form input {

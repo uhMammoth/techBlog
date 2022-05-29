@@ -1,17 +1,4 @@
 <section>
-  {{!-- <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="description">Link</label>
-      <input id="description" name="description" />
-    </div>
-    <button type="submit" class="btn">+ New Post</button>
-  </form> --}}
   <a href="/dashboard/new-post" class="new-post">+ New Post</a>
 </section>
 
@@ -21,8 +8,7 @@
   <ol class="post-list">
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      {{> dashboard-post post}}      
     </li>
     {{/each}}
   </ol>
