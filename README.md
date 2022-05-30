@@ -1,7 +1,6 @@
 # techBlog
 This application demonstrates full stack development in the form of a blog. Newly learned technologies include handlebars template engine
-## Demonstration Video
-[Youtube]()
+
 ## Repository
 [Github](https://github.com/uhMammoth/techBlog)
 
